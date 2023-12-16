@@ -59,8 +59,8 @@ const FAQ = () => {
             </Accordion>
             <Accordion open={open === 4} className="rounded-lg border border-blue-gray-100 px-4">
                 <AccordionHeader
-                    onClick={() => handleOpen(3)}
-                    className={`border-b-0 transition-colors ${open === 3 ? "text-blue-500 hover:!text-blue-700" : ""
+                    onClick={() => handleOpen(4)}
+                    className={`border-b-0 transition-colors ${open === 4 ? "text-blue-500 hover:!text-blue-700" : ""
                         }`}
                 >
                     What if I face technical issues during a live session or with course materials?
@@ -71,8 +71,8 @@ const FAQ = () => {
             </Accordion>
             <Accordion open={open === 5} className="rounded-lg border border-blue-gray-100 px-4">
                 <AccordionHeader
-                    onClick={() => handleOpen(3)}
-                    className={`border-b-0 transition-colors ${open === 3 ? "text-blue-500 hover:!text-blue-700" : ""
+                    onClick={() => handleOpen(5)}
+                    className={`border-b-0 transition-colors ${open === 5 ? "text-blue-500 hover:!text-blue-700" : ""
                         }`}
                 >
                    How do I communicate with my instructor or fellow students within a class?

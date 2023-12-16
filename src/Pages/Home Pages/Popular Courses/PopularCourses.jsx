@@ -93,7 +93,7 @@ const PopularCourses = () => {
                                 ${course?.price}
                             </CardFooter>
                             <CardFooter className="pt-0">
-                                <Button className='bg-[#FB9C46] flex items-center gap-1 text-white text-base px-8'><FaDiscourse/> Enroll</Button>
+                                <Button className='bg-[#FB9C46] flex items-center gap-1 text-white text-base px-8'><PiStudentBold/> Enroll</Button>
                             </CardFooter>
                         </div>
                     </Card>
