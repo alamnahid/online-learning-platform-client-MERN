@@ -36,11 +36,10 @@ const MyEnrollClasses = () => {
 
     //    console.log('------------>', filteredData)
 
-
     return (
         <div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 mt-20 gap-10 mx-[5%] xl:grid-cols-3 2xl:grid-cols-4">
+            {
+                filteredData.length > 0 ?  <div className="grid grid-cols-1 lg:grid-cols-2 mt-20 gap-10 mx-[5%] xl:grid-cols-3 2xl:grid-cols-3">
                 {
                     filteredData?.map(item => <Card key={item._id} className="mt-6 md:w-96 relative">
                         <CardHeader color="blue-gray" className="relative h-56">
@@ -71,6 +70,15 @@ const MyEnrollClasses = () => {
                     </Card>)
                 }
             </div>
+
+            :
+
+            <div className="mt-20">
+                <h1 className="text-2xl font-body text-center">You do not enroll any courses</h1>
+            </div>
+            }
+            
+           
 
         </div>
     );

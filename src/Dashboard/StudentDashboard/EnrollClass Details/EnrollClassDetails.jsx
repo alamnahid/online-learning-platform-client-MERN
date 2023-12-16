@@ -56,7 +56,7 @@ const EnrollClassDetails = () => {
     const { mutate: mutateFirst } = useMutation({
         mutationKey: ['feedback'],
         mutationFn: (addingData) => {
-              return axios.post('http://localhost:5000/feedbacks', addingData, { withCredentials: true, })
+              return axios.post('https://letsyourskillupserver.vercel.app/feedbacks', addingData, { withCredentials: true, })
         },
         onSuccess: () => {
             Swal.fire({
@@ -95,7 +95,7 @@ const EnrollClassDetails = () => {
    const { mutate: mutateSecond  } = useMutation({
     mutationKey: ['assignment'],
     mutationFn: (data) => {
-          return axios.post('http://localhost:5000/assignmentsubmission', data, { withCredentials: true, })
+          return axios.post('https://letsyourskillupserver.vercel.app/assignmentsubmission', data, { withCredentials: true, })
     },
     onSuccess: () => {
         Swal.fire({

@@ -29,7 +29,7 @@ const AddClasses = () => {
     const { mutate } = useMutation({
         mutationKey: ['food'],
         mutationFn: (addingData) => {
-          return axios.post('http://localhost:5000/addclasses', addingData, { withCredentials: true, })
+          return axios.post('https://letsyourskillupserver.vercel.app/addclasses', addingData, { withCredentials: true, })
         },
         onSuccess: () => {
           Swal.fire({

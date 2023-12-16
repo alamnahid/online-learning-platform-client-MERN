@@ -43,12 +43,12 @@ const router = createBrowserRouter([
             {
                 path: '/all-classes/:id',
                 element: <PrivateRoutes><ClassDetails/></PrivateRoutes>,
-                loader: ({params}) => fetch(`http://localhost:5000/addclasses/adminroute/approved/${params.id}` , {credentials: 'include'} )
+                loader: ({params}) => fetch(`https://letsyourskillupserver.vercel.app/addclasses/adminroute/approved/${params.id}` , {credentials: 'include'} )
             },
             {
                 path: '/payment/:id',
                 element: <PrivateRoutes><Payment/></PrivateRoutes>,
-                loader: ({params}) => fetch(`http://localhost:5000/addclasses/adminroute/approved/${params.id}`, {credentials: 'include'} )
+                loader: ({params}) => fetch(`https://letsyourskillupserver.vercel.app/addclasses/adminroute/approved/${params.id}`, {credentials: 'include'} )
             },
             {
                 path: '/techto-letsskillup',
@@ -78,12 +78,12 @@ const router = createBrowserRouter([
             {
                 path: 'enroll-classes',
                 element: <MyEnrollClasses/>,
-                loader: ()=>fetch('http://localhost:5000/addclasses/adminroute/approved')
+                loader: ()=>fetch('https://letsyourskillupserver.vercel.app/addclasses/adminroute/approved')
             },
             {
                 path: 'enroll-classes/:id',
                 element: <EnrollClassDetails/>,
-                loader: ({params})=> fetch(`http://localhost:5000/addclasses/adminroute/approved/${params.id}`)
+                loader: ({params})=> fetch(`https://letsyourskillupserver.vercel.app/addclasses/adminroute/approved/${params.id}`)
             },
             {
                 path: 'student-profile',
@@ -106,7 +106,7 @@ const router = createBrowserRouter([
             {
                 path: 'classes/:id',
                 element: <AdminClassDetails/>,
-                loader: ({params})=> fetch(`http://localhost:5000/addclasses/adminroute/approved/${params.id}`)
+                loader: ({params})=> fetch(`https://letsyourskillupserver.vercel.app/addclasses/adminroute/approved/${params.id}`)
             },
             {
                 path: 'admin-profile',
@@ -131,7 +131,7 @@ const router = createBrowserRouter([
             {
                 path: 'myclass/:id',
                 element: <ClassDetailsTeacher/>,
-                loader: ({params})=> fetch(`http://localhost:5000/addclasses/adminroute/approved/${params.id}`)
+                loader: ({params})=> fetch(`https://letsyourskillupserver.vercel.app/addclasses/adminroute/approved/${params.id}`)
             },
             {
                 path: 'teacher-profile',

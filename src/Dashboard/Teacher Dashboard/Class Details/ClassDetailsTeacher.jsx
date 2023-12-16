@@ -60,7 +60,7 @@ const ClassDetailsTeacher = () => {
     const { mutate } = useMutation({
         mutationKey: ['food'],
         mutationFn: (addingData) => {
-            return axios.post('http://localhost:5000/assignments', addingData, { withCredentials: true, })
+            return axios.post('https://letsyourskillupserver.vercel.app/assignments', addingData, { withCredentials: true, })
         },
         onSuccess: () => {
             Swal.fire({

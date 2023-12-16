@@ -10,20 +10,28 @@ const AllClasses = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+    // const [showData, setShowData] = useState([])
     const [currentPage, setCurrentPage] = useState(0);
     const [itemsPerPage, setItemsPerPage] = useState(10);
+    const [search, setSearch] = useState('')
+
+    const handleSearch = (e)=>{
+        e.preventDefault();
+         const search = e.target.search.value;
+         setSearch(search)
+    }
 
     const axiosPublic = useAxiosPublic()
     const { data: classes = [], refetch: refetchclasses, isLoading } = useQuery({
-        queryKey: ['classes', currentPage, itemsPerPage],
+        queryKey: ['classes', search, currentPage, itemsPerPage],
         queryFn: async () => {
-            const res = await axiosPublic.get(`/addclasses/adminroute/approved?page=${currentPage}&size=${itemsPerPage}`)
+            const res = await axiosPublic.get(`/addclasses/adminroute/approved?search=${search.toString()}&page=${currentPage}&size=${itemsPerPage}`)
             return res.data;
         }
     })
     // console.log(classes)
 
-
+    
 
 
     const [count, setCount] = useState(0)
@@ -74,7 +82,7 @@ const AllClasses = () => {
                 <div className="flex justify-between items-center gap-4">
 
 
-                    <form className="flex justify-end w-full">
+                    <form onSubmit={handleSearch} className="flex justify-end w-full">
                         <input type="text" name="search" placeholder="Search Here" className="input border-2 border-orange-500  w-full rounded-r-none max-w-xs bg-white placeholder:text-xs md:placeholder:text-base outline-none" />
 
                         <input className="btn rounded-l-none  btn-neutral bg-orange-500 text-white capitalize text-lg " type="submit" value="search" />

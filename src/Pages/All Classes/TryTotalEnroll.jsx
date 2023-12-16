@@ -5,7 +5,7 @@ const TryTotalEnroll = () => {
     const [enrollments, setEnrollments] = useState([]);
     useEffect(() => {
         // Fetch enrollments from the server
-        fetch('http://localhost:5000/api/enrollments')
+        fetch('https://letsyourskillupserver.vercel.app/api/enrollments')
             .then((response) => response.json())
             .then((data) => setEnrollments(data))
             .catch((error) => console.error('Error fetching enrollments:', error));

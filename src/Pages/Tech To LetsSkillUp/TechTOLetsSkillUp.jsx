@@ -23,7 +23,7 @@ const TechTOLetsSkillUp = () => {
     const { mutate } = useMutation({
         mutationKey: ['food'],
         mutationFn: (addingData) => {
-          return axios.post('http://localhost:5000/teacherrequest', addingData, { withCredentials: true, })
+          return axios.post('https://letsyourskillupserver.vercel.app/teacherrequest', addingData, { withCredentials: true, })
         },
         onSuccess: () => {
           Swal.fire({

@@ -27,7 +27,7 @@ const SignUp = () => {
   const { mutate } = useMutation({
     mutationKey: ['food'],
     mutationFn: (addingData) => {
-      return axios.post('http://localhost:5000/users', addingData, { withCredentials: true, })
+      return axios.post('https://letsyourskillupserver.vercel.app/users', addingData, { withCredentials: true, })
     },
     onSuccess: () => {
       
