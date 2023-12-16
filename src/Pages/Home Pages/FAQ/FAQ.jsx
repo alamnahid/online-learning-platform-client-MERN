@@ -45,7 +45,7 @@ const FAQ = () => {
                 Yes, you can access your enrolled classes from any device with internet connectivity. Simply log in to your account, and you&apos;ll find your classes listed in your dashboard. Whether you&apos;re using a computer, tablet, or smartphone, your learning progress will be synced across all devices.
                 </AccordionBody>
             </Accordion>
-            <Accordion open={open === 3} className="rounded-lg border border-blue-gray-100 px-4">
+            <Accordion open={open === 3} className="rounded-lg mb-2 border border-blue-gray-100 px-4">
                 <AccordionHeader
                     onClick={() => handleOpen(3)}
                     className={`border-b-0 transition-colors ${open === 3 ? "text-blue-500 hover:!text-blue-700" : ""
@@ -57,7 +57,7 @@ const FAQ = () => {
                 Track your progress easily within each class. We provide features like progress tracking, quizzes, and assignments. Your completed lessons and achievements will be visible in your class dashboard. Additionally, you can view your overall course progress and achievements in your user profile.
                 </AccordionBody>
             </Accordion>
-            <Accordion open={open === 4} className="rounded-lg border border-blue-gray-100 px-4">
+            <Accordion open={open === 4} className="rounded-lg mb-2 border border-blue-gray-100 px-4">
                 <AccordionHeader
                     onClick={() => handleOpen(4)}
                     className={`border-b-0 transition-colors ${open === 4 ? "text-blue-500 hover:!text-blue-700" : ""

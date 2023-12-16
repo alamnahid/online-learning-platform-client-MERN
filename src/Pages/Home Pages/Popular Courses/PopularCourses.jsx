@@ -83,7 +83,7 @@ const PopularCourses = () => {
                                 <a id="my-anchor-element">{course?.description}</a>
                                 <Tooltip
                                     anchorSelect="#my-anchor-element"
-                                    content={course?.description}
+                                    content={'View Details'}
                                 />
                             </Typography>
 
