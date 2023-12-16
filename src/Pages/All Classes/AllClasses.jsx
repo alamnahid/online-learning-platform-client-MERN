@@ -12,7 +12,7 @@ const AllClasses = () => {
     }, []);
     const [currentPage, setCurrentPage] = useState(0);
     const [itemsPerPage, setItemsPerPage] = useState(10);
-    
+
     const axiosPublic = useAxiosPublic()
     const { data: classes = [], refetch: refetchclasses, isLoading } = useQuery({
         queryKey: ['classes', currentPage, itemsPerPage],
@@ -23,7 +23,7 @@ const AllClasses = () => {
     })
     // console.log(classes)
 
-   
+
 
 
     const [count, setCount] = useState(0)
@@ -36,12 +36,12 @@ const AllClasses = () => {
                 console.error("Error fetching data:", error);
             }
         };
-    
+
         fetchData(); // Call the async function inside useEffect
     }, []);
     const numberOfPages = Math.ceil(count / itemsPerPage);
     const pages = []
-    for(let i = 0; i < numberOfPages; i++){
+    for (let i = 0; i < numberOfPages; i++) {
         pages.push(i)
     }
     const handleItemsPerPage = e => {
@@ -64,20 +64,32 @@ const AllClasses = () => {
         }
         refetchclasses()
     }
-    if(isLoading){
-        return <Loading/>
+    if (isLoading) {
+        return <Loading />
     }
     return (
         <div className="px-[5%]">
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-5 mt-20 lg:pt-20 justify-items-center items-center gap-8">
+            <div className="mt-20 lg:pt-12">
+                <div className="flex justify-between items-center gap-4">
+
+
+                    <form className="flex justify-end w-full">
+                        <input type="text" name="search" placeholder="Search Here" className="input border-2 border-orange-500  w-full rounded-r-none max-w-xs bg-white placeholder:text-xs md:placeholder:text-base outline-none" />
+
+                        <input className="btn rounded-l-none  btn-neutral bg-orange-500 text-white capitalize text-lg " type="submit" value="search" />
+                    </form>
+                </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-5 mt-20  justify-items-center items-center gap-8">
                 {
-                    classes.map(classs=><DisplayAllClasses classs={classs} key={classs._id}/>)
+                    classes.map(classs => <DisplayAllClasses classs={classs} key={classs._id} />)
                 }
             </div>
 
             <div className='text-center mb-10 space-x-4 md:space-x-6 mt-20'>
-              
+
                 <button className="btn  btn-outline border-orange-500 border-4 md:w-[7rem] md:text-lg" onClick={handlePrevPage}>Prev</button>
                 {
                     pages.map(page => <button
@@ -93,7 +105,7 @@ const AllClasses = () => {
                     <option value="50">50</option>
                 </select>
             </div>
-            
+
         </div>
     );
 };

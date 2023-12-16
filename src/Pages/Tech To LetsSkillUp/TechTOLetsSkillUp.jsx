@@ -1,5 +1,5 @@
 
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { useForm } from "react-hook-form"
 import { AuthContext } from "../../Provider/AuthProvider";
 import { useMutation, useQuery } from "@tanstack/react-query";
@@ -8,6 +8,9 @@ import Swal from "sweetalert2";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import teacher from "../../assets/images/teacher2.gif"
 const TechTOLetsSkillUp = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     const { user } = useContext(AuthContext);
     console.log(user)
     const {
