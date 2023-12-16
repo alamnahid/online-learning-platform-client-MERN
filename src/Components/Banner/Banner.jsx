@@ -4,6 +4,7 @@ import award from "../../assets/images/awart.png"
 import { TypeAnimation } from 'react-type-animation';
 import { Link } from "react-router-dom";
 import { MdPlayLesson } from "react-icons/md";
+import "./Banner.css"
 
 const Banner = () => {
     return (
@@ -41,8 +42,8 @@ const Banner = () => {
             </div>
 
 
-            <div data-aos="fade-down" className="relative">
-                <div style={{background: "linear-gradient(139deg, #F1C365 7.67%, #F6AE54 40.13%, #FF922F 59.18%)"}} className="lg:w-[28rem] lg:h-[39rem] rounded-[12.75rem] flex justify-center items-center overflow-hidden">
+            <div data-aos="fade-down" className="relative wrap">
+                <div style={{background: "linear-gradient(139deg, #F1C365 7.67%, #F6AE54 40.13%, #FF922F 59.18%)"}} className="lg:w-[28rem] lg:h-[39rem] rounded-[12.75rem] flex justify-center items-center overflow-hidden circle">
                     <img className="pt-5 w-[50vw] md:w-[30vw] lg:w-auto" src={bannerimage} alt="" />
                 </div>
 

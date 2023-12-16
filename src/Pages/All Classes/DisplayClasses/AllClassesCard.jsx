@@ -4,7 +4,7 @@ import user from "../../../assets/images/user.svg"
 import { Link } from "react-router-dom";
 const AllClassesCard = ({classs}) => {
     return (
-        <div className="w-[20em] h-[31rem] rounded-lg border-2 border-[#FB9C46] rounded-tr-[5rem] bg-white">
+        <div className="w-[20em] h-[30rem] rounded-lg border-2 border-[#FB9C46] rounded-tr-[5rem] bg-white">
 
             <div className="relative">
                 <img className="rounded-tr-[5rem] h-[14rem] w-full" src={classs?.image} alt="" />
