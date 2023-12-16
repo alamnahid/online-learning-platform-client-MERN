@@ -1,6 +1,6 @@
-## (assignment12_category_0007) LetsSkillUp-client-side Live Link: https://letsyourskillup.web.app/
+## LetsSkillUp-client-side Live Link: https://letsskillsup.web.app/
 
-## Server Side Code Link: https://github.com/jannat-jui/lets-your-skills-up-server-side
+## Server Side Code Link: https://github.com/alamnahid/online-learning-server-side
 
 ## Project features
 
