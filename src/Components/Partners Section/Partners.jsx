@@ -1,4 +1,4 @@
-import { Tooltip } from 'react-tooltip';
+
 import Marquee from "react-fast-marquee";
 import { useEffect, useState } from "react";
 
@@ -22,10 +22,7 @@ const Partners = () => {
                          
                          <div className='h-[1.9rem] lg:h-[3rem] text-xs overflow-hidden cursor-pointer'>
                          <a id="my-anchor-element">{item?.description}</a>
-                                <Tooltip className=" text-white"
-                                    anchorSelect="#my-anchor-element"
-                                    content={item?.name}
-                                />
+                                
                          </div>
                         
                     </div>)

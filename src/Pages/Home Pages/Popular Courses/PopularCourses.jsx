@@ -18,6 +18,7 @@ import { Tooltip } from 'react-tooltip';
 import useAxiosPublic from '../../../Hooks/useAxiosPublic';
 import { useQuery } from '@tanstack/react-query';
 import Loading from '../../../Components/Loading/Loading';
+import { Link } from 'react-router-dom';
 
 const PopularCourses = () => {
     const axiosPublic = useAxiosPublic()
@@ -93,7 +94,7 @@ const PopularCourses = () => {
                                 ${course?.price}
                             </CardFooter>
                             <CardFooter className="pt-0">
-                                <Button className='bg-[#FB9C46] flex items-center gap-1 text-white text-base px-8'><PiStudentBold/> Enroll</Button>
+                               <Link to={`/all-classes/${course._id}`}> <Button className='bg-[#FB9C46] flex items-center gap-1 text-white text-base px-8'><PiStudentBold/> Enroll</Button></Link>
                             </CardFooter>
                         </div>
                     </Card>
